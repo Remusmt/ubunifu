@@ -15,6 +15,7 @@ var result = parser.ParseArguments<
     HandlerOptions, 
     RepositoryOptions, 
     ServiceOptions, 
-    ValidatorOptions>(args);
+    ValidatorOptions,
+    DbContextOptions>(args);
 
 result.ResultParser<object>();

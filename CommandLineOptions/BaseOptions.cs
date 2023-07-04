@@ -6,7 +6,7 @@ public abstract class BaseOptions {
             longName: "model", 
             Required = true, 
             HelpText = "Name of the model class used for code generation")]
-    public string ModelName { get; set; } = "";
+    public virtual string ModelName { get; set; } = "";
     
     [Option(shortName: 'n', longName: "name", HelpText = "Class name of the generated code file")]
     public string? Name { get; set; }

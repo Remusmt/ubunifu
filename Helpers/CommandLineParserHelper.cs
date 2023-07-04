@@ -28,6 +28,11 @@ public static class CommandLineParserHelper {
             Console.WriteLine("Repository types {0}", opt.Types);
             Console.WriteLine("Repository name {0}", opt.Name);
             SetConsoleDefaultColor();
+        }).WithParsed<DbContextOptions>(opt => {
+            SetConsoleSuccessColor();
+            Console.WriteLine("Repository model name {0}", opt.ModelName);
+            Console.WriteLine("Repository name {0}", opt.Name);
+            SetConsoleDefaultColor();
         }).WithNotParsed(errors => {
             foreach(Error error in errors) {
                 SetConsoleErrorColor();
