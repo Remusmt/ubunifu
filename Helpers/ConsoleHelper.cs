@@ -1,14 +1,29 @@
 namespace Ubunifu;
 public static class ConsoleHelper {
-    public static void SetConsoleDefaultColor() {
+    static void SetConsoleDefaultColor() {
         Console.ForegroundColor = ConsoleColor.White;
     }
  
-    public static void SetConsoleSuccessColor() {
+    static void SetConsoleSuccessColor() {
         Console.ForegroundColor = ConsoleColor.Green;
     }   
 
-    public static void SetConsoleErrorColor() {
+    static void SetConsoleErrorColor() {
         Console.ForegroundColor = ConsoleColor.Red;
+    }
+
+    public static void WriteErrorMessage(string? message) {
+        SetConsoleErrorColor();
+        Console.WriteLine(message);
+    }
+
+    public static void WriteInfoMessage(string? message) {
+        SetConsoleDefaultColor();
+        Console.WriteLine(message);
+    }
+
+    public static void WriteSuccessMessage(string? message) {
+        SetConsoleSuccessColor();
+        Console.WriteLine(message);
     }
 }

@@ -6,4 +6,4 @@ namespace Ubunifu.CommandLineOptions;
 public class DbContextOptions: BaseOptions {
     [Option(shortName: 'm', longName: "model", Required = false)]
     public override string ModelName { get; set; } = "";
- }
+}
